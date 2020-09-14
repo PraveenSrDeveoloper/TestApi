@@ -1,0 +1,36 @@
+{
+    "name": "imim",
+    "version": "1.0.0",
+    "description": "Test Project",
+    "main": "index.js",
+    "scripts": {
+        "test:int": "nyc --reporter=json mocha test/integration --exit",
+        "test": "nyc --reporter=json mocha --recursive  test/unit test/integration --exit",
+        "coverage": "nyc npm run test",
+        "test:unit": "nyc --reporter=json mocha test/unit --exit",
+        "coverage:unit": "nyc -x models npm run test:unit",
+        "coverage:int": "nyc npm run test:int",
+        "start": "node index.js"
+    },
+    "author": "Praveen Karanam",
+    "license": "ISC",
+    "dependencies": {
+        "eslint": "^6.6.0",
+        "express": "^4.17.1",
+        "install": "^0.13.0",
+        "mocha": "^6.2.2",
+        "moment": "^2.24.0",
+        "moment-timezone": "^0.5.27"
+    },
+    "devDependencies": {
+        "chai": "^4.2.0",
+        "chai-http": "^4.3.0",
+        "cypress-plugin-retries": "^1.5.2",
+        "mock-req-res": "^1.1.4",
+        "mock-requests": "^1.2.0",
+        "mock-session": "0.0.5",
+        "sinon": "^7.5.0",
+        "sinon-chai": "^3.4.0",
+        "sinon-test": "^2.4.1"
+    }
+}
